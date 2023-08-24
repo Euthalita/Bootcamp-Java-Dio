@@ -1,0 +1,39 @@
+Podemos editar o read.me com o markdown que é tipo um HTML, porém bem mais simples e fácil.
+Para aprender como utilizar o markdown, veja a documentação no site:
+https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github
+Para editar o read.me acessa-se o site https://readme.so/pt 
+
+No terminal do git, para criar um arquivo vázio, usa-se o comando "touch nome do arquivo", que é um
+comando padrão que já tem no git.
+Exemplo:	touch README.md 
+
+Após criar um readme no site, copiar e colar o código no bloco de notas e colar no arquivo que foi 
+criado, no caso, o README.md.
+Feito isso, inserir o comando "git add README.md" para adicionar o arquivo á area de preparação. Após
+ser feita a preparação, é hora de grava as alterações feitas através do comando 'git commit -m "alguma
+msg"'
+	git add README.md
+	git commit -m "commit inicial"
+	git log (para ver o commit feito)
+
+ATENÇÃO!!
+O git não reconhece pastas de diretórios vázios, para que ele reconheça, é necessário ter arquivos 
+dentro, então usa-se o touch para criar um arquivo
+Então, por exemplo, foi criado um diretório chamado resumos. Em seguida, para criar um arquivo 
+entro desse diretório, digita-se o touch nome do diretorio/nome do arquivo
+	mkdir resumos
+	touch resumos/resumos-git.md
+
+Dependendo da finalidade de um projeto, há pastas e arquivos que não devem ser commitados, para isso,
+cria-se uma pasta de gitignore e dentro dessa pasta, ficará os arquivos que não serão commitados.
+Para isso usa-se o comando echo nome-do-arquivo-ignorado/ > .gitignore
+Por exemplo, suponha que eu queira ignorar a pasta resumos
+	echo resumos/ > .gitignore
+Dentro desse arquivo gitignore, haverá a pasta resumos que será ignorada no commit
+
+Para excluir o gitignore usa-se o comando
+	echo > .gitignore
+
+As vezes, acontece de haver um arquivo dentro de um diretório, escrito .gitkeep, esse arquivo é para 
+que o diretório seja reconhecido pelo git, mas o .gitkeep não é um arquivo relevante para uso.
+

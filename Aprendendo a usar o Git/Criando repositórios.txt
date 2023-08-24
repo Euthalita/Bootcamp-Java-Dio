@@ -1,0 +1,36 @@
+A primeira coisa a se fazer, é criar uma pasta que será o repositório do git. Utilizando o terminal
+do git, coloca-se o comando mkdir.
+Esse comando significa make diretory, que é para criar uma pasta e é um comando básico do terminal.
+	mkdir nome-da-pasta
+
+Para entrar/acessar essa pasta pelo terminal, usa-se o comando cd.
+	cd nome-da-pasta/
+Para voltar para a pasta anterior, usa-se o comando cd..
+	cd..
+
+Para trasnformar a pasta em um repositorio git, após acessa-la pelo comando anterior, usa-se o comando
+git init.
+	git init
+
+Para acessar essa pasta que foi transformada em um repositório git, usa-se o comando cd .git
+	cd .git
+Obs: Toda pasta que inicia com o .(ponto), é uma pasta que está em oculta e esse diretório .git é
+o responsável por gerenciar o controle de versão.
+
+O comando ls mostra o que tem dentro dessa pasta.
+O comando cat config é responsável por mostrar as configurações do repositório.
+
+Para criar um arquivo dentro de um diretório:
+Acessar o diretório que você irá salvar o arquivo através do git e colocar o comando
+	touch nome do arquivo
+	touch resumos.txt
+
+
+Resumindo:
+
+Cria-se um diretório
+Acessa o diretorio
+Inicializa-se o repositório git na pasta criada
+	mkdir guardar-resumos
+	cd guardar-resumos
+	git init

@@ -1,0 +1,23 @@
+Para clonar um arquivo do gitHub para o git, o primeiro passo, é acessar o gitHub e ir no repositório
+que deseja clonar, clicar em code e copiar o https. Em seguida, acessar o git e colocar o comando
+git clone e o https
+Exemplo:	git clone https://github.com/Euthalita/Java.git
+
+Para mudar o nome da pasta clonada usa-se o mesmo comando acima + o novo nome 
+	git clone https://github.com/Euthalita/Java.git Ensinamentos Java
+
+Será clonado o repositório novamente, porém com o outro nome, entao ficará duas pastas clonadas, para
+clonar com o nome diferente do repositório original, basta fazer esse segundo comando diretamente
+
+O comando git remote -v, mostra os repositórios do git que estão vinculados ao gitHub
+
+-Para conectar um repositório local em um repositório remoto, usa-se o comando git remote add + o nome
+que será dado ao repositório remoto + url da pasta que será vinculada no gitHub, por padrão o nome 
+da pasta fica como origin, então o recomendado é deixar como origin
+Exemplo:
+	git remote add origin https://github.com/Euthalita/Java.git 
+
+Há repositórios com várias branchs e é possível selecionar e clonar apenas uma através do comando git
+clone + URL + --branch + nome da branch escolhida + --single-branch
+	git clone https://github.com/Euthalita/Java.git --branch main --single-branch
+
