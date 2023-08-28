@@ -1,0 +1,61 @@
+Para excluir um repositório do git, caso você tenha inicializado o git na pasta errada, usa-se o 
+comando:
+	rm -rf .git
+
+	-Restaurando o arquivo anterior
+Suponha que tenha sido feita uma alteração em um arquivo e esse arquivo não tenha sido comitado, mas
+está na área de preparação, e você queira voltar á versão anterior. Para isso, usa-se o comando 
+"git restore nome do arquivo"
+Exemplo:	git restore README.md
+
+Mas ATENÇÃO, esse comando apaga a ultima versão, então não é possível voltar para a ultima versão.
+Então é necessário ter atenção e a certeza que a última versão com as alterações não será utilizada.
+
+	-Alterando um comentario
+Quando é feito um commit, é inserido uma mensagem nesse commit e posteriormente é possível alterar 
+essa mensagem, no exemplo abaixo, o comando para fazer a alteração do comentário, será feito no ultimo
+commit.
+Exemplo: 	git --amend -m"novo comentário"
+Podemos fazer a alteração pelo editor, colocando apenas o comando git --amend após esse comando, será
+aberto o editor.
+Quando abrir o editor, aperta a tecla "i", após isso, é só editar a mensagem do commit
+Para sair, clicar em esc e digitar, :wq
+
+
+	-Restaurando um commit anterior
+Há três opções: git reset --soft
+		git reset --mixed
+		git reset --hard
+
+- git reset --soft + hash
+Nesse comando, ele pega os commits posteriores ao indicado pelo hash e adiciona esses arquivos á área
+de preparação, após isso é só usar o add. e comitar.
+Para copiar o hash é só colocar o comando git log, feito isso, aparecerá todos os commits feitos.
+
+- git reset --mixed + hash
+Nesse comando, pode ser colocado o git reset + hash ou git reset + nome da pasta, pois esse comando 
+é um comportamento padrão.
+Ele pega os commits posteriores ao que você indicou pelo hash e adiciona esses arquivos de modo
+que eles fiquem pre selecionados para ir para a area de preparação, ou seja, o git ainda não
+reconhece esses arquivos, eles ficam apenas na árvore de trabalho, sem ser reconhecido pelo git
+Então, a diferença entre o soft e o mixed é que o soft já manda para a area de preparação e o mixed
+deixa pre-selecionado para mandar para a area de preparação, ou seja, o git não reconhece os commits.
+Por exemplo, suponha que eu queira tirar um commit de uma pasta eu posso colocar 
+	git reset nome da pasta/arquivo
+	git reset resumos/aula-01.md
+Esse arquivo aula-01.md é o que será excluido.
+
+- git reset --hard + hash
+Nesse comando, ele exclui todos os commits posteriores ao hash, ou seja, não fica nenhuma, ele exclui
+toda.
+
+Outra forma de excluir um commit em específico é com o git restore --staged nome-da-pasta/arquivo
+	fit restore --staged resumos/aula-02.md
+
+ATENÇÃO:
+Para informações mais detalhadas das alterações e commits feitos, bast usar o comando git reflog
+	git reflog 
+ 
+
+
+ 
