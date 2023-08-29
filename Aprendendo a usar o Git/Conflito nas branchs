@@ -1,0 +1,10 @@
+Quando se está trabalhando em um projeto com várias pessoas, pode acontecer de duas pessoas fazer 
+alteração em um mesmo arquivo e essas duas pessoas enviar as alterações para o gitHub. Suponha que 
+eu altere no repositório local e meu colega já tenha enviado a alteração para o gitHub, quando eu
+tentar enviar a alteração, com o comando "git push nome-do-repositorio + branch" o git entrará em 
+conflito e retornará um erro, visto que, a alteração que foi feita no repositório remoto não foi
+feita no repositório local. Então, é necessário baixar as alterações para fazer a alteração, através
+do comando git pull. O git retornará um erro para que você ajuste qual das alterações será mantida.
+Você pode selecionar ou alterar o arquivo que será enviado.
+Após isso, você pode colocar um "git status" para ver o que foi modificado e depois só comitar e 
+subir para o repositório remoto.
