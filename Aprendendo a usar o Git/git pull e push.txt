@@ -1,0 +1,7 @@
+O comando "git remote add", conecta o git ao gitHub e você pode mandar as alterações do repositório 
+local para o gitHub
+	git remote add https://...
+
+O comando "git push -u origin main" envia as alterações do repositório local para o repositório remoto 
+
+O git pull puxa as alterações do repositorio remoto do gitHub para o repositório local do git
