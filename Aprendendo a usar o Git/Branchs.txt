@@ -1,0 +1,35 @@
+Uma branch (em tradução, "ramo"), é uma ramificação do seu projeto. Então, imagina que você tenha que
+adicionar uma nova funcionalidade ao projeto e precisa separar essa funcionalidade do projeto todo,
+então você adiciona uma nova branch.
+
+Quando se cria uma branch dentro de uma já existente, por exemplo, dentro da branch principal(main),
+ela irá apontar para o último commit feito, a partir de então, os novos commits irão para essa nova 
+branch criada, e a branch principal ficará apontando para o último commit feito sem ser dentro dessa
+nova branch.
+Para que a branch principal aponte para o ultimo commit feito na outra branch, é necessário mesclar
+as branchs
+
+-CRIANDO UMA BRANCH
+Para criar uma branch, usa-se o comando "git checkout -b nome-da-branch"
+	git checkout -b teste
+Esse comando cria 
+
+-TROCANDO DE BRANCH
+Para trocar de branch, usa-se o comando git checkout 'nome-da-branch'
+	git checkout 'main'
+
+-ULTIMO COMMIT
+O comando "git branch -v" mostra o ultimo commit de cada branch
+
+Quando se cria uma nova branch, os novos commits vão somente para essa branch, e caso você necessite 
+enviar um commit para a branch principal, é necessário mesclar as branchs. Então, suponha que você 
+esteja na main principal e queira mesclar com outra, usa-se o comando "git merge nome-da-branch"
+	git merge teste (irá mesclar a branch teste com a branch principal)
+Assim, todos os arquivos da branch teste passarão para a branch principal
+
+-CONSULTANDO AS BRANCHS
+Para ver todas as branchs, usa-se o comando "git branch"
+
+Para excluir uma branch, usa-se o comando "git branch -d nome-da-branch-que-sera-excluida"
+	git branch -d teste
+
