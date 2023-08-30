@@ -1,0 +1,35 @@
+git pull - Esse comando é a junção do comando git fetch(baixa as alterações) + git merge(mescla as
+alterações)
+
+	-git fetch
+Suponha que você queira baixar as alterações do repositório remoto mas ainda não quer mesclar com o 
+repositório local, para isso, usa-se o comando git fetch nome-do-repositório + branch
+	git fetch origin main
+
+	-git merge
+Para trazer o conteudo do repositório remoto para o local, após utilizar o camando git fetch, usa-se 
+o comando git merge nome-do-repositório/branch.
+Esse comando serve para você baixar conteúdos da branch remota sem mesclar com a branch local
+	git merge origin/main
+
+	-git clone
+Suponha que você queira clonar um repositório, mas esse repositório possui várias branchs e você quer
+clonar apenas uma. Por exemplo, suponha que você queira clonar apenas uma branch, no caso, uma branch
+chamada teste, para clonar, você copia a URL do repositório no gitHub e em seguida usa-se o comando
+	git clone URL --branch teste --single-branch
+
+	-git stash
+Suponha que você precise criar uma nova branch, mas foi feita uma modificação e você não quer que 
+essa alteração vá junto na nova branch, para isso é necessário arquivar essa modificação e para isso
+usa-se o comando git stash, apos isso, é só criar a nova branch, na qual, não terá os arquivos 
+modificados
+
+	-git stash list
+Retorna as modificações que foram arquivadas
+
+	-git stash pop
+Tras de volta as modificações arquivadas e também exclui a ultima alteração feita
+
+	-git stash apply
+Tras de volta as modificações arquivadas e mantém as alterações feitas caso você precise utilizar
+para uso posterior
