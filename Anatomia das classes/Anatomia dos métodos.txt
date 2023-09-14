@@ -1,0 +1,29 @@
+A estrutura é composta dessa forma:
+	TipoRetorno NomeObjetivoNoInfinitivo Parametro(s)
+Exemplo:
+	int somar (int numeroUm, int numero2)
+	String formatarCep (long cep)
+Um método pode exigir parametros ou não. (OBS: Para mais informações sobre métodos, acesse a pasta
+Java/POO/Métodos.txt)
+Os parametros podem ser de tipos diferentes do que o método irá retornar, por exemplo, um método pode 
+receber parametros do tipo int, double, etc; e retornar o valor como String. Veja o exemplo abaixo:
+	String formatarCep (long cep)
+
+O método sempre começara com public, protected ou privet e sempre terá o () para passar os parametros
+	public static String nomeCompleto (String primeiroNome, String segundoNome){
+}
+
+Para atribuir valores nos parametros, podemos criar variaveis que serão usadas como parametros, e para
+chamar o método, podemos criar outra variável.
+Exemplo:
+	String primeiroNome = "Ana";
+	String segundoNome = "Beatriz";
+Cria-se uma variavel(pode ter o mesmo nome do método) para receber o método, assim passamos os parametros
+que foram informados no exemplo acima.
+Chamando o método:
+	String nomeCompleto = nomeCompleto (primeiroNome, segundoNome);
+Abaixo está o método que foi chamado:
+	public static String nomeCompleto (String primeiroNome, String segundoNome){
+		return "Resultado do método " + primeiroNome.concat(" ").concat(segundoNome);
+	}
+O uso do concat é outro método e é usado para concatenar, mas também podemos concatenar com o +
