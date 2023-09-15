@@ -1,0 +1,26 @@
+Á medida que nosso sistema vai evoluindo, surgem novos arquivos (código fonte) em nossa estrutura de 
+arquivos do projeto. Isso exige que seja realizado uma organização destes arquivos através de pacotes
+(packages).
+
+Quando você pega um projeto de uma empresa, por exemplo, os pacotes podem estar abreviados como :
+	com.pimenta.modelo
+O exemplo acima é uma abreviação de comercial.
+Há uma convenção para nomear os sub-diretórios, visto que, as empresas possuem segmentos como 
+comercial, organizacional e opensource. Assim, podemos abreviar o nome dessas pastas.
+	comercial = com
+	organizacional = org
+	opensource = opensource
+
+Suponhamos que eu tenha uma empresa chamada HyperTech e ela só atua com a area comercial e eu esteja
+criando um sistema de notificação, veja abaixo como eu posso nomear os arquivos
+Exemplos:
+	com.hypertech.notification  (Esta pasta é a pasta principal, que guardará todos os projetos) 
+
+Imagine que tenha pastas com diversas finalidades, como por exemplo, pasta para o app, modelo, utili-
+dades, entre outros..
+	com.hypertech.notification.app
+	com.hypertech.notification.model
+	com.hypertech.notification.util
+
+Outro exemplo para nomear os arquivos de estudos:
+	edu.java.anatomia
