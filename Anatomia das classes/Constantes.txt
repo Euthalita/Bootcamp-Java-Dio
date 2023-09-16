@@ -1,0 +1,8 @@
+As constantes são valores armazenados em memória que não podem ser modificados depois de declarados.
+Em Java, esses valores são representados pela palavra "final", seguida do tipo.
+Por convenção, Contantes são sempre escritas em CAIXA ALTA.
+
+Exemplo:
+	final double VALOR_DE_PI = 3.14;
+Se tentar alterar o valor da variavel PI, dará erro. 
+
